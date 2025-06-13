@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 interface AccessLog {
   ip: string;
@@ -78,6 +79,14 @@ export default function AdminPage() {
             </tbody>
           </table>
         )}
+        <div className="mt-8 text-center">
+          <Link
+            href="/"
+            className="px-4 py-2 rounded-full bg-green-500 hover:bg-green-600 text-white font-bold transition-all shadow-md"
+          >
+            Voltar para Home
+          </Link>
+        </div>
       </section>
     </main>
   );

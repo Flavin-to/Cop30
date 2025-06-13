@@ -29,7 +29,7 @@ async function getExistingBlogs() {
   return blogs;
 }
 
-export default async function BlogsPage() {
+const blogs = async () => {
   const blogPosts = await getExistingBlogs();
 
   return (
@@ -106,4 +106,6 @@ export default async function BlogsPage() {
       </footer>
     </main>
   );
-}
+};
+
+export default blogs;

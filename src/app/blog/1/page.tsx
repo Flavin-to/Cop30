@@ -1,24 +1,4 @@
-interface BlogData {
-  [key: string]: { title: string; content: string };
-}
-
-const blogs: BlogData = {
-  "1": {
-    title: "Abertura da COP30",
-    content:
-      "A abertura da COP30 na escola foi um sucesso! Contamos com apresentações e debates sobre meio ambiente.",
-  },
-  "2": {
-    title: "Debates sobre Sustentabilidade",
-    content:
-      "Alunos participaram de debates sobre energia limpa, reflorestamento e reciclagem.",
-  },
-  "3": {
-    title: "Atividades Interativas com Alunos",
-    content:
-      "Fizemos jogos e dinâmicas sobre a importância da preservação ambiental.",
-  },
-};
+import Link from 'next/link';
 
 export default function BlogPage() {
   return (
@@ -34,9 +14,9 @@ export default function BlogPage() {
           </a>
           <ul className="hidden md:flex space-x-10 text-gray-200 font-semibold text-lg">
             <li>
-              <a href="/" className="hover:text-green-400 transition-all duration-200">
+              <Link href="/" className="hover:text-green-400 transition-all duration-200">
                 Início
-              </a>
+              </Link>
             </li>
             <li>
               <a href="/#compromisso" className="hover:text-green-400 transition-all duration-200">
