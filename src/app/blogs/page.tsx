@@ -1,3 +1,5 @@
+// blog: This file is part of the COP30 Escola project, which showcases student blogs related to the COP30 conference.
+
 import Link from "next/link";
 import fs from "fs/promises";
 import path from "path";
