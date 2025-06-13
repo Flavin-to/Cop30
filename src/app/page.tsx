@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -51,12 +52,12 @@ export default function HomePage() {
         {/* Header */}
         <header className="fixed top-0 left-0 right-0 bg-black/80 backdrop-blur-lg shadow-2xl z-50 transition-all duration-300">
           <nav className="max-w-7xl mx-auto flex items-center justify-between h-16 px-6">
-            <a
+            <Link
               href="#"
               className="text-3xl font-black text-green-400 tracking-widest select-none hover:text-green-300 transition-all"
             >
               COP30 <span className="text-white">Escola</span>
-            </a>
+            </Link>
             <ul className="hidden md:flex space-x-10 text-gray-200 font-semibold text-lg">
               <li>
                 <a
@@ -75,20 +76,20 @@ export default function HomePage() {
                 </a>
               </li>
               <li>
-                <a
+                <Link
                   href="/blogs"
                   className="hover:text-green-400 transition-all duration-200"
                 >
                   Blogs
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/login"
                   className="ml-4 px-4 py-1 rounded-full bg-green-500 hover:bg-green-600 text-white font-bold transition-all shadow-md"
                 >
                   Login
-                </a>
+                </Link>
               </li>
             </ul>
 
@@ -147,22 +148,22 @@ export default function HomePage() {
                 </a>
               </li>
               <li>
-                <a
+                <Link
                   href="/blogs"
                   className="hover:text-green-300 transition"
                   onClick={() => setMobileOpen(false)}
                 >
                   Blogs
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/login"
                   className="px-6 py-2 rounded-full bg-green-500 hover:bg-green-600 text-white font-bold transition-all shadow-md"
                   onClick={() => setMobileOpen(false)}
                 >
                   Login
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
