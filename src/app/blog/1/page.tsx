@@ -1,17 +1,15 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 export default function BlogPage() {
   return (
     <main className="min-h-screen font-sans text-gray-100 bg-gradient-to-br from-black via-gray-900 to-black px-0 py-0 max-w-full">
-      {/* Header */}
       <header className="fixed top-0 left-0 right-0 bg-black/80 backdrop-blur-lg shadow-2xl z-50 transition-all duration-300">
         <nav className="max-w-7xl mx-auto flex items-center justify-between h-16 px-6">
-          <a
-            href="/"
-            className="text-3xl font-black text-green-400 tracking-widest select-none hover:text-green-300 transition-all"
-          >
-            COP30 <span className="text-white">Escola</span>
-          </a>
+          <Link href="/" className="text-3xl font-black text-green-400 tracking-widest select-none hover:text-green-300 transition-all">
+            <span>
+              COP30 <span className="text-white">Escola</span>
+            </span>
+          </Link>
           <ul className="hidden md:flex space-x-10 text-gray-200 font-semibold text-lg">
             <li>
               <Link href="/" className="hover:text-green-400 transition-all duration-200">
@@ -29,20 +27,17 @@ export default function BlogPage() {
               </a>
             </li>
             <li>
-              <a href="/blogs" className="hover:text-green-400 transition-all duration-200">
+              <Link href="/blogs" className="hover:text-green-400 transition-all duration-200">
                 Blogs
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
       </header>
 
-      {/* Spacer for fixed header */}
       <div className="h-16" />
 
-      {/* Banner */}
       <section className="relative w-full h-72 md:h-96 rounded-b-3xl overflow-hidden shadow-2xl mb-16 group">
-        {/* Imagem de fundo do banner */}
         <img
           src="/cop30-banner.jpg"
           alt="Banner COP30"
@@ -53,12 +48,12 @@ export default function BlogPage() {
             COP30: Conferência do Clima
           </h1>
           <p className="max-w-3xl text-lg sm:text-xl md:text-2xl leading-relaxed drop-shadow-lg font-light animate-fade-in delay-200">
-            A COP30 é a 30ª Conferência das Nações Unidas sobre Mudanças Climáticas, reunindo líderes mundiais, cientistas, jovens e a sociedade civil para debater soluções ambientais. Nossa escola participa ativamente, promovendo conhecimento e engajamento para um futuro sustentável.
+            A COP30 é a 30ª Conferência das Nações Unidas sobre Mudanças Climáticas,
+            reunindo líderes mundiais, cientistas, jovens e a sociedade civil para debater soluções ambientais. Nossa escola participa ativamente, promovendo conhecimento e engajamento para um futuro sustentável.
           </p>
         </div>
       </section>
 
-      {/* Conteúdo principal */}
       <section className="max-w-3xl mx-auto bg-gray-900/80 rounded-3xl shadow-2xl p-10 mb-24">
         <h2 className="text-3xl font-bold text-green-400 mb-6">Sobre a COP30</h2>
         <p className="text-lg mb-4 text-gray-200">
@@ -69,23 +64,16 @@ export default function BlogPage() {
         </p>
       </section>
 
-      {/* Footer */}
       <footer className="mt-32 py-12 bg-gradient-to-r from-green-700 via-green-600 to-green-700 text-white select-none">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-base md:text-lg font-light">
             &copy; {new Date().getFullYear()} COP30 Escola. Todos os direitos reservados.
           </p>
           <nav className="flex space-x-8 items-center">
-            <a
-              href="/#compromisso"
-              className="hover:underline hover:text-green-300 transition"
-            >
+            <a href="/#compromisso" className="hover:underline hover:text-green-300 transition">
               Compromisso
             </a>
-            <a
-              href="/#galeria"
-              className="hover:underline hover:text-green-300 transition"
-            >
+            <a href="/#galeria" className="hover:underline hover:text-green-300 transition">
               Galeria
             </a>
             <a
@@ -99,7 +87,7 @@ export default function BlogPage() {
           </nav>
         </div>
       </footer>
-      {/* Animations */}
+
       <style>{`
         @keyframes fade-in {
           from { opacity: 0; transform: translateY(40px);}

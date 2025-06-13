@@ -29,12 +29,9 @@ export default function AdminPage() {
     <main className="min-h-screen font-sans text-gray-100 bg-gradient-to-br from-black via-gray-900 to-black px-0 py-0 max-w-full">
       <header className="fixed top-0 left-0 right-0 bg-black/80 backdrop-blur-lg shadow-2xl z-50 transition-all duration-300">
         <nav className="max-w-7xl mx-auto flex items-center justify-between h-16 px-6">
-          <a
-            href="/"
-            className="text-3xl font-black text-green-400 tracking-widest select-none hover:text-green-300 transition-all"
-          >
-            COP30 <span className="text-white">Escola</span>
-          </a>
+          <Link href="/" className="text-3xl font-black text-green-400 tracking-widest select-none hover:text-green-300 transition-all">
+            <span>COP30 <span className="text-white">Escola</span></span>
+          </Link>
           <span className="text-green-200 font-bold text-lg">Admin</span>
         </nav>
       </header>
@@ -54,13 +51,9 @@ export default function AdminPage() {
           Apagar Todos os Registros
         </button>
         {loading ? (
-          <div className="text-green-200 text-center text-lg">
-            Carregando logs...
-          </div>
+          <div className="text-green-200 text-center text-lg">Carregando logs...</div>
         ) : logs.length === 0 ? (
-          <div className="text-gray-400 text-center text-lg">
-            Nenhum acesso registrado.
-          </div>
+          <div className="text-gray-400 text-center text-lg">Nenhum acesso registrado.</div>
         ) : (
           <table className="w-full text-left border-separate border-spacing-y-2">
             <thead>
